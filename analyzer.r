@@ -90,6 +90,13 @@ https://research.stlouisfed.org/fred2/series/HOSAVGUSWTM052N
 For drug industry see here:
 https://research.stlouisfed.org/fred2/search?st=drug
 
+
+# Real Median Household Income in the United States
+# https://research.stlouisfed.org/fred2/series/MEHOINUSA672N
+getSymbols('MEHOINUSA672N',src='FRED')
+chartSeries(MEHOINUSA672N, subset='last 25 years')
+
+
 # San Francisco Tech Pulse
 # https://research.stlouisfed.org/fred2/series/SFTPINDM114SFRBSF
 getSymbols('SFTPINDM114SFRBSF',src='FRED')
