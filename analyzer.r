@@ -1,5 +1,20 @@
 library('quantmod')
 
+#need to be added:
+  - gold (https://research.stlouisfed.org/fred2/search?st=gold=)
+  - oil
+  - corn (https://research.stlouisfed.org/fred2/search?st=corn)
+  - other metals
+  - The Inflation Rate Compared to Short-Term Interest Rates
+  - Long-Term Growth in National Productivity
+  - Trends in the Balance-of-Payment and International-Debt Levels
+  - Trends in the Domestic Budget Balance and Levels of Public Debt
+  - Government Spending as a Percentage of Gross Domestic Product (GDP)
+  - Actual GDP Growth
+  - Consumer Sentiment
+  - The Savings Rate
+
+
 getSymbols("AAPL")
 chartSeries(AAPL, subset='last 5 years')
 addBBands()
@@ -27,6 +42,46 @@ addBBands()
 
 ## Source: FED
 ## Method #1
+
+
+# Gold Fixing Price 10:30 A.M. (London time) in London Bullion Market, based in U.S. Dollars
+# https://research.stlouisfed.org/fred2/series/GOLDAMGBD228NLBM
+getSymbols('GOLDAMGBD228NLBM',src='FRED')
+chartSeries(GOLDAMGBD228NLBM, subset='last 100 years')
+
+# Crude Oil Prices: West Texas Intermediate (WTI) - Cushing, Oklahoma
+# https://research.stlouisfed.org/fred2/series/DCOILWTICO
+getSymbols('DCOILWTICO',src='FRED')
+chartSeries(DCOILWTICO, subset='last 50 years')
+
+
+# Crude Oil Prices: Brent - Europe
+# https://research.stlouisfed.org/fred2/series/DCOILBRENTEU
+getSymbols('DCOILBRENTEU',src='FRED')
+chartSeries(DCOILBRENTEU, subset='last 50 years')
+
+
+# Gross Domestic Product
+# https://research.stlouisfed.org/fred2/series/GDP
+getSymbols('GDP',src='FRED')
+chartSeries(GDP, subset='last 10 years')
+
+# Real Gross Domestic Product
+# https://research.stlouisfed.org/fred2/series/A191RL1Q225SBEA
+getSymbols('A191RL1Q225SBEA',src='FRED')
+chartSeries(A191RL1Q225SBEA, subset='last 10 years')
+
+
+# Trimmed Mean PCE Inflation Rate
+# https://research.stlouisfed.org/fred2/series/PCETRIM12M159SFRBDAL
+getSymbols('PCETRIM12M159SFRBDAL',src='FRED')
+chartSeries(PCETRIM12M159SFRBDAL, subset='last 10 years')
+
+# Interest Rate Spreads (TED Spread, i.e. USD vs. Libor)
+# https://research.stlouisfed.org/fred2/series/TEDRATE
+getSymbols('TEDRATE',src='FRED')
+chartSeries(TEDRATE, subset='last 10 years')
+
 
 # Effective Federal Funds Rate
 # https://research.stlouisfed.org/fred2/series/FF
@@ -57,6 +112,12 @@ chartSeries(CPIAUCNS, subset='last 10 years')
 # https://research.stlouisfed.org/fred2/series/GFDEGDQ188S
 getSymbols('GFDEGDQ188S',src='FRED')
 chartSeries(GFDEGDQ188S, subset='last 100 years')
+
+# Federal Debt: Total Public Debt
+# https://research.stlouisfed.org/fred2/series/GFDEBTN
+getSymbols('GFDEBTN',src='FRED')
+chartSeries(GFDEBTN, subset='last 100 years')
+
 
 # Central Bank Assets for Euro Area (11-19 Countries)
 # https://research.stlouisfed.org/fred2/series/ECBASSETS
