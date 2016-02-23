@@ -1,6 +1,5 @@
 library('quantmod')
 
-
 getSymbols("AAPL")
 chartSeries(AAPL, subset='last 5 years')
 addBBands()
