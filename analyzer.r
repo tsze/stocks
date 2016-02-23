@@ -120,6 +120,9 @@ getSymbols('INDPRO',src='FRED')
 chartSeries(INDPRO, subset='last 25 years')
 
 
+
+#Alternative
+
 ## Method #2
 setDefaults(getSymbols,src='FRED')
 # OR
