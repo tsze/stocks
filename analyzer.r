@@ -65,31 +65,44 @@ getSymbols('ECBASSETS',src='FRED')
 chartSeries(ECBASSETS, subset='last 50 years')
 
 
-NASDAQ 100 Index
-https://research.stlouisfed.org/fred2/series/NASDAQ100
+# NASDAQ 100 Index
+# https://research.stlouisfed.org/fred2/series/NASDAQ100
+getSymbols('NASDAQ100',src='FRED')
+chartSeries(NASDAQ100, subset='last 25 years')
 
-NASDAQ Composite Index
-https://research.stlouisfed.org/fred2/series/NASDAQCOM
+# NASDAQ Composite Index
+# https://research.stlouisfed.org/fred2/series/NASDAQCOM
+getSymbols('NASDAQCOM',src='FRED')
+chartSeries(NASDAQCOM, subset='last 25 years')
 
 
-Median Sales Price of Existing Homes
-https://research.stlouisfed.org/fred2/series/HOSMEDUSM052N
+# Median Sales Price of Existing Homes
+# https://research.stlouisfed.org/fred2/series/HOSMEDUSM052N
+getSymbols('HOSMEDUSM052N',src='FRED')
+chartSeries(HOSMEDUSM052N, subset='last 25 years')
 
-Existing Home Sales
-https://research.stlouisfed.org/fred2/series/EXHOSLUSM495S
+# Existing Home Sales
+# https://research.stlouisfed.org/fred2/series/EXHOSLUSM495S
+getSymbols('EXHOSLUSM495S',src='FRED')
+chartSeries(EXHOSLUSM495S, subset='last 25 years')
 
-Existing Home Sales: Months Supply
-https://research.stlouisfed.org/fred2/series/HOSSUPUSM673N
+# Existing Home Sales: Months Supply
+# https://research.stlouisfed.org/fred2/series/HOSSUPUSM673N
+getSymbols('HOSSUPUSM673N',src='FRED')
+chartSeries(HOSSUPUSM673N, subset='last 25 years')
 
-Median Sales Price of Existing Homes in West Census Region
-https://research.stlouisfed.org/fred2/series/HOSMEDUSWTM052N
+# Median Sales Price of Existing Homes in West Census Region
+# https://research.stlouisfed.org/fred2/series/HOSMEDUSWTM052N
+getSymbols('HOSMEDUSWTM052N',src='FRED')
+chartSeries(HOSMEDUSWTM052N, subset='last 25 years')
 
-Mean Sales Price of Existing Homes in West Census Region
-https://research.stlouisfed.org/fred2/series/HOSAVGUSWTM052N
+# Mean Sales Price of Existing Homes in West Census Region
+# https://research.stlouisfed.org/fred2/series/HOSAVGUSWTM052N
+getSymbols('HOSAVGUSWTM052N',src='FRED')
+chartSeries(HOSAVGUSWTM052N, subset='last 25 years')
 
-For drug industry see here:
-https://research.stlouisfed.org/fred2/search?st=drug
-
+# For drug industry see here:
+# https://research.stlouisfed.org/fred2/search?st=drug
 
 # Real Median Household Income in the United States
 # https://research.stlouisfed.org/fred2/series/MEHOINUSA672N
