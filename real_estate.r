@@ -29,3 +29,11 @@ chartSeries(HOSMEDUSWTM052N, subset='last 50 years')
 # https://research.stlouisfed.org/fred2/series/HOSAVGUSWTM052N
 getSymbols('HOSAVGUSWTM052N',src='FRED')
 chartSeries(HOSAVGUSWTM052N, subset='last 50 years')
+
+# S&P/Case-Shiller 20-City Composite Home Price Index
+# https://research.stlouisfed.org/fred2/series/SPCS20RSA
+getSymbols('SPCS20RSA',src='FRED')
+chartSeries(SPCS20RSA, subset='last 50 years')
+
+
+
