@@ -6,10 +6,6 @@ library('quantmod')
 getSymbols('CASANF0URN',src='FRED')
 chartSeries(CASANF0URN, subset='last 25 years')
 
-# S&P/Case-Shiller CA-San Francisco Home Price Index
-# https://research.stlouisfed.org/fred2/series/SFXRSA
-getSymbols('SFXRSA',src='FRED')
-chartSeries(SFXRSA, subset='last 25 years')
 
 # Consumer Price Index for All Urban Consumers: All items in San Francisco-Oakland-San Jose, CA (CMSA)
 # https://research.stlouisfed.org/fred2/series/CUUSA422SA0
@@ -88,28 +84,28 @@ chartSeries(MHICA06041A052NCEN, subset='last 25 years')
 
 # Estimated Percent of People of All Ages In Poverty for Marin County, CA
 # https://research.stlouisfed.org/fred2/series/PPAACA06041A156NCEN
-getSymbols('',src='FRED')
-chartSeries(, subset='last 25 years')
+getSymbols('PPAACA06041A156NCEN',src='FRED')
+chartSeries(PPAACA06041A156NCEN, subset='last 25 years')
 
 # Per Capita Personal Income in Marin County, CA
 # https://research.stlouisfed.org/fred2/series/PCPI06041
-getSymbols('',src='FRED')
-chartSeries(, subset='last 25 years')
+getSymbols('PCPI06041',src='FRED')
+chartSeries(PCPI06041, subset='last 25 years')
 
 # Civilian Labor Force in Marin County, CA
 # https://research.stlouisfed.org/fred2/series/CAMARI5LFN
-getSymbols('',src='FRED')
-chartSeries(, subset='last 25 years')
+getSymbols('CAMARI5LFN',src='FRED')
+chartSeries(CAMARI5LFN, subset='last 25 years')
 
 # Bachelor's Degree or Higher (5-year estimate) in Marin County, CA
 # https://research.stlouisfed.org/fred2/series/HC01ESTVC1706041
-getSymbols('',src='FRED')
-chartSeries(, subset='last 25 years')
+getSymbols('HC01ESTVC1706041',src='FRED')
+chartSeries(HC01ESTVC1706041, subset='last 25 years')
 
 # Personal Income in Marin County, CA
 # https://research.stlouisfed.org/fred2/series/PI06041
-getSymbols('',src='FRED')
-chartSeries(, subset='last 25 years')
+getSymbols('PI06041',src='FRED')
+chartSeries(PI06041, subset='last 25 years')
 
 # 
 # 
@@ -118,18 +114,18 @@ chartSeries(, subset='last 25 years')
 
 # St. Louis Fed Financial Stress Index
 # https://research.stlouisfed.org/fred2/series/STLFSI
-getSymbols('',src='FRED')
-chartSeries(, subset='last 25 years')
+getSymbols('STLFSI',src='FRED')
+chartSeries(STLFSI, subset='last 25 years')
 
 # Civilian Labor Force in San Francisco County/city, CA
 # https://research.stlouisfed.org/fred2/series/CASANF0LFN
-getSymbols('',src='FRED')
-chartSeries(, subset='last 25 years')
+getSymbols('CASANF0LFN',src='FRED')
+chartSeries(CASANF0LFN, subset='last 25 years')
 
 # Consumer Price Index for All Urban Consumers: Electricity in San Francisco-Oakland-San Jose, CA (CMSA)
 # https://research.stlouisfed.org/fred2/series/CUURA422SEHF01
-getSymbols('',src='FRED')
-chartSeries(, subset='last 25 years')
+getSymbols('CUURA422SEHF01',src='FRED')
+chartSeries(CUURA422SEHF01, subset='last 25 years')
 
 # San Francisco Tech Pulse
 # https://research.stlouisfed.org/fred2/series/SFTPINDM114SFRBSF
@@ -138,13 +134,13 @@ chartSeries(SFTPINDM114SFRBSF, subset='last 25 years')
 
 # Bachelor's Degree or Higher (5-year estimate) in San Francisco County/city, CA
 # https://research.stlouisfed.org/fred2/series/HC01ESTVC1706075
-getSymbols('',src='FRED')
-chartSeries(, subset='last 25 years')
+getSymbols('HC01ESTVC1706075',src='FRED')
+chartSeries(HC01ESTVC1706075, subset='last 25 years')
 
 # Consumer Price Index for All Urban Consumers: Commodities less food and beverages in San Francisco-Oakland-San Jose, CA (CMSA)
 # https://research.stlouisfed.org/fred2/series/CUURA422SACL11
-getSymbols('',src='FRED')
-chartSeries(, subset='last 25 years')
+getSymbols('CUURA422SACL11',src='FRED')
+chartSeries(CUURA422SACL11, subset='last 25 years')
 
 # 
 # 
