@@ -43,11 +43,33 @@ getKeyStats_xpath <- function(symbol) {
 library(TTR)
 x <- stockSymbols()
 tickers <- c(x$Symbol)
-
-
 stats <- ldply(tickers, getKeyStats_xpath)
-rownames(stats) <- tickers
+#rownames(stats) <- tickers  # next row should solve the error for this code, but unverified yet
+rownames(stats) = make.names(tickers, unique=TRUE)
 #write.csv(t(stats), "FinancialStats_updated.csv",row.names=TRUE)  
+
+# keep only stats with no NA
+stats.clean <- stats[,complete.cases(stats)]
+na.omit(stats)
+
+
+stats[stats=="<NA>"]<-NA
+
+stopifnot(complete.cases(stats) != is.na(stats))
+# filter for high P/E ratio
+
+
+
+stats$`PEG Ratio` <- as.numeric(stats$`PEG Ratio`)
+stats.pe <- stats[stats[,"PEG Ratio"]>20,]
+
+
+
+
+
+
+
+
 
 #######################################################################
 
