@@ -37,19 +37,10 @@ addBBands()
 # list of industries
 unique(x$Industry)
 
-# Fetch U.S. symbols from the internet for stock exchange and calculate means, variability etc
-nyseSymbols <- stockSymbols("NYSE") #get all symbols from New York Stock Exchange
-symbols <- nyseSymbols$Symbol
-symbols <- head(symbols)  # to be deleted
-library(quantmod)
-e <- new.env()
-getSymbols(symbols, from='2016-01-01', env=e)
-#getSymbols('GOOG;FB', from='2000-01-01', env=e)
-smacheck <- do.call(merge, eapply(e, function(x) SMA(Cl(x), 5))) # moving average
-#colnames(smacheck) <- symbols
-vol <- do.call(merge,eapply(e,function (x) volatility(x, n = 10, calc = "close", N = 260, mean0 = FALSE))) # volatility
 
-# Alternative to get moving averages
+# Fetch U.S. symbols from the internet for stock exchange and calculate means, variability etc
+library(quantmod)
+library(TTR)
 nyseSymbols <- stockSymbols("NYSE")
 symbols <- nyseSymbols$Symbol
 tickers <- head(symbols)
@@ -59,16 +50,6 @@ sma.prices  <- zoo(apply(prices, 2, TTR_fn), order.by=index(TTR_fn(prices[,1]) )
 #colnames(smacheck) <- symbols
 vol <- do.call(merge,eapply(e,function (x) volatility(x, n = 10, calc = "close", N = 260, mean0 = FALSE))) # volatility
 
-
-
-
-# Fetch Yahoo! Finance data from the internet
-ibm <- getYahooData("IBM", 19990404, 20050607)
-
-# get time series
-library(quantmod)
-check <- c("FB","GOOG")
-getSymbols(check, from='2000-01-01')
 
 
 
