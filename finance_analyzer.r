@@ -3,6 +3,7 @@
 #######################################################################
 
 #setwd("C:/Users/i827456/Pictures/Blog/Oct-25")
+# http://stackoverflow.com/questions/34439281/how-to-download-data-from-web-need-to-skip-and-move-to-next-item-if-data-doesn
 require(XML)
 require(plyr)
 getKeyStats_xpath <- function(symbol) {
@@ -30,14 +31,23 @@ getKeyStats_xpath <- function(symbol) {
     df <- data.frame(t(values))
     colnames(df) <- measures
     return(df)
+    
   } else {
-    break
+    cat("Could not find",symbol,"\n")
+    return(data.frame(NA))
   }
 }
 
-tickers <- c("AAPL","TSLA","ROG.VX","GOOG")
+# get all tickers from a stock market
+#tickers <- c("AAPL","TSLA","ROG.VX","GOOG")
+library(TTR)
+x <- stockSymbols()
+tickers <- c(x$Symbol)
+
+
 stats <- ldply(tickers, getKeyStats_xpath)
 rownames(stats) <- tickers
 #write.csv(t(stats), "FinancialStats_updated.csv",row.names=TRUE)  
 
 #######################################################################
+
