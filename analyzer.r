@@ -44,7 +44,7 @@ chartSeries(TSLA, subset='last 5 years')
 addBBands()
 
 getSymbols("ROG.VX")
-chartSeries(ROG.VX, subset='last 5 years')
+chartSeries(ROG.VX, subset='last 25 years')
 addBBands()
 
 getSymbols("GOOG")

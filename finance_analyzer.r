@@ -43,6 +43,7 @@ getKeyStats_xpath <- function(symbol) {
 library(TTR)
 x <- stockSymbols()
 tickers <- c(x$Symbol)
+tickers <- c("ROG.VX","RHHBY")      #overwrites the above tickers with manual set tickers
 stats <- ldply(tickers, getKeyStats_xpath)
 #rownames(stats) <- tickers  # next row should solve the error for this code, but unverified yet
 rownames(stats) = make.names(tickers, unique=TRUE)

@@ -51,10 +51,29 @@ sma.prices  <- zoo(apply(prices, 2, TTR_fn), order.by=index(TTR_fn(prices[,1]) )
 vol <- do.call(merge,eapply(e,function (x) volatility(x, n = 10, calc = "close", N = 260, mean0 = FALSE))) # volatility
 
 
+# performance analysis
+require("PerformanceAnalytics")
+
+ts <- SFTPINDM114SFRBSF
+colnames(ts) <- "close"
+ts <- data.frame(date=time(ts),coredata(ts$close))
+ts$date <- as.Date(as.character(ts$date ),format="%Y-%m-%d")
+ts <- xts(ts$close,ts$date)
+
+charts.PerformanceSummary(ts,colorset=rich12equal)
+
+# to test:
+require(fPortfolio)
+data <- SPISECTOR.RET
+charts.PerformanceSummary(data ,colorset=rich12equal)
 
 
-
-
+ts <- SFTPINDM114SFRBSF
+colnames(ts) <- "close"
+ts <- data.frame(date=time(ts),coredata(ts$close))
+ts$date <- as.Date(as.character(ts$date ),format="%Y-%m-%d")
+ts <- timeSeries(ts$close,ts$date)
+charts.PerformanceSummary(ts,colorset=rich12equal)
 
 
 
